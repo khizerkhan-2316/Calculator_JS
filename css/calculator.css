@@ -1,0 +1,325 @@
+/* Google fonts: */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap");
+:root {
+  /* Typography variables: */
+  --main-button-font: "Roboto Slab", serif;
+  --main-header-font: "Playfair Display", serif;
+  --main-text-font: "Kanit", sans-serif;
+
+  /*Color variables: */
+  --header-and-footer-colour: #425763;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media only screen and (min-width: 1025px) {
+  main {
+    width: 100;
+    height: 92.6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #CalculatorFrame {
+    width: 35%;
+    height: auto;
+    border: 1px solid #cccccc;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+  }
+
+  #calculatingHistory {
+    width: 100%;
+    height: 300px;
+    border-bottom: 1px solid #cccccc;
+  }
+
+  #Input {
+    width: 100%;
+    height: 50px;
+  }
+
+  #Input input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: center;
+    font-family: var(--main-text-font);
+  }
+
+  #calculateOptions {
+    width: 100%;
+    height: 200px;
+    background-color: #ededed;
+    border-top: 1px solid #cccccc;
+  }
+
+  header {
+    width: 100%;
+    height: 5vh;
+    background-color: var(--header-and-footer-colour);
+    display: flex;
+    align-items: center;
+  }
+
+  .navigation {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 10%;
+    list-style: none;
+  }
+
+  .navigation li a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: var(--main-text-font);
+  }
+
+  .navigation li a:hover {
+    color: black;
+  }
+
+  .visabillityNone {
+    display: none;
+  }
+
+  .active {
+    color: crimson;
+  }
+
+  footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header-and-footer-colour);
+  }
+
+  #footerlist {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+  }
+
+  #footerlist a {
+    text-decoration: none;
+    color: black;
+    font-family: var(--main-text-font);
+    font-size: 14px;
+    color: white;
+  }
+  #footerlist a:hover {
+    color: crimson;
+  }
+
+  #activeColor {
+    color: crimson;
+  }
+
+  #calculateOptions {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .calcBox {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+
+  #numbersbox button {
+    width: 22%;
+    height: 15%;
+    margin: 2px 2px;
+    border: none;
+    border: 0;
+    background: rgba(0, 0, 0, 0.5); /* light background with opacity 50% */
+    border: 1px solid #111; /* black border */
+    padding: 5px;
+    color: #eee; /* white text */
+    border-radius: 5px; /* rounded corners */
+    font-size: 15px; /* larger fonts */
+    cursor: pointer; /* make it look clickable */
+    font-family: var(--main-button-font);
+    color: black;
+  }
+  #numbersbox button:nth-child(4n + 4) {
+    background: radial-gradient(
+      circle,
+      rgba(253, 253, 240, 1) 0%,
+      rgba(237, 237, 237, 1) 24%,
+      rgba(252, 252, 252, 1) 73%
+    );
+  }
+
+  #numbersbox button:hover {
+    box-shadow: 1px 2px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hidden {
+    display: none;
+  }
+
+  .menu li,
+  a {
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    font-family: var(--main-headingfont);
+  }
+
+  .header {
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    border-bottom: 1px solid white;
+    background-color: var(--header-and-footer-colour);
+  }
+
+  .header ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .header ul a {
+    display: block;
+    outline: 1px solid white;
+    outline-style: solid;
+    padding: 20px;
+  }
+
+  .header ul a:hover {
+    color: black;
+  }
+
+  .header .logo {
+    float: left;
+    display: block;
+  }
+
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+
+  #logo {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 18px;
+    width: 35px;
+  }
+
+  .header .menu-icon {
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+  }
+
+  .header .menu-icon .nav-icon {
+    background-color: white;
+    display: block;
+    height: 2px;
+    top: 5px;
+    width: 18px;
+    position: relative;
+    transition: background 2s ease-out;
+  }
+
+  .header .menu-icon .nav-icon:before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 0.2 ease-out;
+    top: 10px;
+    background: white;
+  }
+
+  .header .menu-icon .nav-icon:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 5px;
+    position: absolute;
+    transition: all 0.2 ease-out;
+    background: white;
+
+    /* check her */
+  }
+
+  .header .menu-button {
+    display: none;
+  }
+
+  .header .menu-button:checked ~ .menu {
+    max-height: 350px;
+  }
+
+  .active {
+    color: crimson;
+  }
+
+  main {
+    width: 100;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #CalculatorFrame {
+    width: 80%;
+    height: 70%;
+    border: 1px solid #cccccc;
+  }
+
+  footer {
+    width: 100%;
+    background-color: var(--header-and-footer-colour);
+    margin: 0;
+    border: 1px solid crimson;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #footerlist {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-family: var(--main-text-font);
+    justify-content: space-around;
+    width: 100%;
+  }
+}

@@ -1,0 +1,229 @@
+/* Google fonts: */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap");
+:root {
+  /* Typography variables: */
+  --main-button-font: "Roboto Slab", serif;
+  --main-header-font: "Playfair Display", serif;
+  --main-text-font: "Kanit", sans-serif;
+
+  /*Color variables: */
+
+  --header-and-footer-colour: #425763;
+}
+}
+
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media only screen and (min-width: 1025px) {
+  header {
+    width: 100%;
+    height: 5vh;
+    background-color: var(--header-and-footer-colour);
+    display: flex;
+    align-items: center;
+  }
+
+  .navigation {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 10%;
+    list-style: none;
+  }
+
+  .navigation li a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: var(--main-text-font);
+  }
+
+  .navigation li a:hover {
+    color: black;
+  }
+
+  .visabillityNone {
+    display: none;
+  }
+
+  .active {
+    color: crimson;
+  }
+
+  footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header-and-footer-colour);
+  }
+
+  #footerlist {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+
+  }
+
+  #footerlist a {
+    text-decoration: none;
+    color: black;
+    font-family: var(--main-text-font);
+    font-size: 14px;
+    color: white;
+  }
+  #footerlist a:hover {
+    color: crimson;
+  }
+
+
+}
+
+@media screen and (max-width: 1024px) {
+  .hidden {
+    display: none;
+  }
+
+  .menu li,
+  a {
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    font-family: var(--main-headingfont);
+  }
+
+  .header {
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    border-bottom: 1px solid white;
+    background-color: var(--header-and-footer-colour);
+  }
+
+  .header ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .header ul a {
+    display: block;
+    outline: 1px solid white;
+    outline-style: solid;
+    padding: 20px;
+  }
+
+  .header ul a:hover {
+    color: black;
+  }
+
+  .header .logo {
+    float: left;
+    display: block;
+  }
+
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+
+  #logo {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 18px;
+    width: 35px;
+  }
+
+  .header .menu-icon {
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+  }
+
+  .header .menu-icon .nav-icon {
+    background-color: white;
+    display: block;
+    height: 2px;
+    top: 5px;
+    width: 18px;
+    position: relative;
+    transition: background 2s ease-out;
+  }
+
+  .header .menu-icon .nav-icon:before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 0.2 ease-out;
+    top: 10px;
+    background: white;
+  }
+
+  .header .menu-icon .nav-icon:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 5px;
+    position: absolute;
+    transition: all 0.2 ease-out;
+    background: white;
+
+    /* check her */
+  }
+
+  .header .menu-button {
+    display: none;
+  }
+
+  .header .menu-button:checked ~ .menu {
+    max-height: 350px;
+  }
+
+  .active {
+    color: crimson;
+  }
+
+  footer {
+    width: 100%;
+    background-color: var(--header-and-footer-colour);
+    margin: 0;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #footerlist {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-family: var(--main-text-font);
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  #df{
+  height: 500px;
+  }
+}
