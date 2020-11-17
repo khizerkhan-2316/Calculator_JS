@@ -23,6 +23,75 @@ html {
 }
 
 @media only screen and (min-width: 1025px) {
+  header {
+    width: 100%;
+    height: 5vh;
+    background-color: var(--header-and-footer-colour);
+    display: flex;
+    align-items: center;
+  }
+
+  .navigation {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 10%;
+    list-style: none;
+  }
+
+  .navigation li a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: var(--main-header-font);
+  }
+
+  .navigation li a:hover {
+    color: black;
+  }
+
+  .visabillityNone {
+    display: none;
+  }
+
+  footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header-and-footer-colour);
+  }
+
+  #footerlist {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 5px 0px;
+  }
+
+  #footerlist a {
+    text-decoration: none;
+    color: black;
+    font-family: var(--main-header-font);
+    font-size: 14px;
+    color: white;
+  }
+  #footerlist a:hover {
+    color: black;
+  }
+
+  #activeColor {
+    color: crimson;
+  }
+
+  #activeColor:hover {
+    color: black;
+  }
+
   main {
     width: 100;
     height: 92.6vh;
@@ -66,72 +135,107 @@ html {
     border-top: 1px solid #cccccc;
   }
 
-  header {
-    width: 100%;
-    height: 5vh;
-    background-color: var(--header-and-footer-colour);
+  #calculateOptions {
     display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     align-items: center;
   }
 
-  .navigation {
+  .calcBox {
+    width: 50%;
+    height: auto;
     display: flex;
-    width: 60%;
-    justify-content: space-around;
-    align-items: center;
-    margin-left: 10%;
-    list-style: none;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
   }
 
-  .navigation li a {
-    color: white;
-    font-size: 14px;
-    text-decoration: none;
-    font-family: var(--main-text-font);
-  }
-
-  .navigation li a:hover {
+  #numbersbox button {
+    width: 22%;
+    height: 15%;
+    margin: 2px 2px;
+    border: none;
+    border: 0;
+    background: rgba(
+      199,
+      199,
+      199,
+      0.8
+    ); /* light background with opacity 50% */
+    border: 1px solid #111; /* black border */
+    padding: 5px;
+    color: #eee; /* white text */
+    border-radius: 5px; /* rounded corners */
+    font-size: 15px; /* larger fonts */
+    cursor: pointer; /* make it look clickable */
+    font-family: var(--main-button-font);
     color: black;
   }
-
-  .visabillityNone {
-    display: none;
+  #numbersbox button:nth-child(4n + 4) {
+    background: radial-gradient(
+      circle,
+      rgba(253, 253, 240, 1) 0%,
+      rgba(237, 237, 237, 1) 24%,
+      rgba(252, 252, 252, 1) 73%
+    );
   }
 
-  .active {
-    color: crimson;
+  #numbersbox button:hover {
+    box-shadow: 1px 2px;
   }
 
-  footer {
-    width: 100%;
-    height: auto;
+  #white {
+    background: radial-gradient(
+      circle,
+      rgba(253, 253, 240, 1) 0%,
+      rgba(237, 237, 237, 1) 24%,
+      rgba(252, 252, 252, 1) 73%
+    );
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    width: 100;
+    height: 92.6vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--header-and-footer-colour);
   }
 
-  #footerlist {
-    width: 30%;
+  #CalculatorFrame {
+    width: 35%;
+    height: auto;
+    border: 1px solid #cccccc;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
+    flex-flow: column;
+    justify-content: flex-start;
   }
 
-  #footerlist a {
-    text-decoration: none;
-    color: black;
+  #calculatingHistory {
+    width: 100%;
+    height: 300px;
+    border-bottom: 1px solid #cccccc;
+  }
+
+  #Input {
+    width: 100%;
+    height: 50px;
+  }
+
+  #Input input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: center;
     font-family: var(--main-text-font);
-    font-size: 14px;
-    color: white;
-  }
-  #footerlist a:hover {
-    color: crimson;
   }
 
-  #activeColor {
-    color: crimson;
+  #calculateOptions {
+    width: 100%;
+    height: 200px;
+    background-color: #ededed;
+    border-top: 1px solid #cccccc;
   }
 
   #calculateOptions {
@@ -155,7 +259,12 @@ html {
     margin: 2px 2px;
     border: none;
     border: 0;
-    background: rgba(0, 0, 0, 0.5); /* light background with opacity 50% */
+    background: rgba(
+      199,
+      199,
+      199,
+      0.8
+    ); /* light background with opacity 50% */
     border: 1px solid #111; /* black border */
     padding: 5px;
     color: #eee; /* white text */
@@ -177,9 +286,16 @@ html {
   #numbersbox button:hover {
     box-shadow: 1px 2px;
   }
-}
 
-@media screen and (max-width: 1024px) {
+  #white {
+    background: radial-gradient(
+      circle,
+      rgba(253, 253, 240, 1) 0%,
+      rgba(237, 237, 237, 1) 24%,
+      rgba(252, 252, 252, 1) 73%
+    );
+  }
+
   .hidden {
     display: none;
   }
@@ -189,7 +305,7 @@ html {
     color: white;
     list-style: none;
     text-decoration: none;
-    font-family: var(--main-headingfont);
+    font-family: var(--main-header-font);
   }
 
   .header {
@@ -285,8 +401,12 @@ html {
     max-height: 350px;
   }
 
-  .active {
+  #activeColor {
     color: crimson;
+  }
+
+  #activeColor:hover {
+    color: black;
   }
 
   main {
@@ -307,7 +427,6 @@ html {
     width: 100%;
     background-color: var(--header-and-footer-colour);
     margin: 0;
-    border: 1px solid crimson;
     height: 90px;
     display: flex;
     justify-content: center;
@@ -318,8 +437,16 @@ html {
     display: flex;
     justify-content: space-around;
     list-style: none;
-    font-family: var(--main-text-font);
+    font-family: var(--main-header-font);
     justify-content: space-around;
     width: 100%;
+  }
+
+  #footerlist li a:hover {
+    color: black;
+  }
+
+  .active {
+    color: crimson;
   }
 }
