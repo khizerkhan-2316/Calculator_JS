@@ -8,6 +8,8 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../css/calculator.css">
+    <script src="../js/Calculator.js" defer></script>
+
   </head>
   <body>
     <!--Desktop/Laptop header/navbar-->
@@ -53,28 +55,29 @@
 </section>
 
 <section id="Input">
-<input type="text" placeholder="Enter your calculation here... ">
+<input type="text" placeholder="Enter your calculation here... " id="primeInput" onkeydown="keyCode(event)">
 </section>
 
 <section id="calculateOptions">
 <section class="calcBox" id="numbersbox">
-<button value=7>7</button>
-<button value=8>8</button>
-<button>3</button>
-<button>/</button>
-<button>4</button>
-<button>5</button>
-<button>6</button>
-<button>x</button>
-<button>1</button>
-<button>2</button>
-<button>3</button>
-<button>-</button>
-<button>0</button>
-<button>.</button>
+<button onclick="numberClick(7)">7</button>
+<button onclick="numberClick(8)">8</button>
+<button onclick="numberClick(3)">3</button>
+<button onclick="numberClick('/')">/</button>
+<button onclick="numberClick(4)">4</button>
+<button onclick="numberClick(5)">5</button>
+<button onclick="numberClick(6)">6</button>
+<button onclick="numberClick('*')">x</button>
+<button onclick="numberClick(1)">1</button>
+<button onclick="numberClick(2)">2</button>
+<button onclick="numberClick(3)">3</button>
+<button onclick="numberClick('-')">-</button>
+<button onclick="numberClick(0)">0</button>
+<button onclick="numberClick('.')">.</button>
 
-<button id="white">%</button>
-<button>+</button>
+<button onclick="numberClick('%')">%</button>
+<button onclick="numberClick('+')"> +</button>
+<button id="calculate" onclick="numberClick(=)">=</button>
 
 
 
@@ -95,6 +98,5 @@
      </ul>
     </footer>
 
-    <script src="" async defer></script>
   </body>
 </html>
